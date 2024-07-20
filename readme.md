@@ -8,7 +8,7 @@ Step 2: Get Groq API Key
 
 Skip DigialOcean Step 3 and 4 for AWS Step below
 
-## Open AWS account
+## Step 3 & 4: Open AWS account
 1. Create EC2 Ubuntu Instance
 2. Create Elastic IP
     - Associate Elastic IPs to EC2 Ubuntu Instance
@@ -20,19 +20,18 @@ Skip DigialOcean Step 3 and 4 for AWS Step below
         - Custom TCP port 3001
         - CIDR blocks 0.0.0.0/0
 
-Replace WEBHOOK_URL in .env file
-WEBHOOK_URL=http://<ELASTIC_IP>:3001/
+4. Replace WEBHOOK_URL in .env file
+- WEBHOOK_URL=http://<ELASTIC_IP>:3001/
 
-Continue Step 5: Setup Server 
+## Continue Step 5: Setup Server 
 1. SSH into your server (You can click connect on the AWS website instance)
 2. run `sudo sh docker-installer.sh`
 3. refresh the terminal page because `docker-installer.sh` reboots after installation for a smoother run
 4. run `sh start_scout.sh`
 5. Verify using Superoo7's code below:
 
-# Test Server Response:
-## Should get "OK" response
-`curl localhost:3001`
+## Test Server Response:
+run `curl localhost:3001`
 
 You should get a response like:
 `ubuntu@ip-172-123-123-123:~$ curl localhost:3001`
