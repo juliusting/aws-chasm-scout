@@ -15,8 +15,10 @@ Skip DigialOcean Step 3 and 4 for AWS Step below
 3. EC2 > Security Groups > your_launch_wizard_security_group (linked to your instance)
     - Edit inbound rules 
         - Custom TCP port 3001
+        - CIDR blocks 0.0.0.0/0
     - Edit outbound rules 
         - Custom TCP port 3001
+        - CIDR blocks 0.0.0.0/0
 
 Replace WEBHOOK_URL in .env file
 WEBHOOK_URL=http://<ELASTIC_IP>:3001/
