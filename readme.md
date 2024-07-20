@@ -35,8 +35,8 @@ Continue Step 5: Setup Server
 `curl localhost:3001`
 
 You should get a response like:
-ubuntu@ip-172-123-123-123:~$ curl localhost:3001
-OKubuntu@ip-172-123-123-123:~$ 
+`ubuntu@ip-172-123-123-123:~$ curl localhost:3001`
+`OKubuntu@ip-172-123-123-123:~$`
 `^ Note the OK`
 
 # Test LLM
@@ -49,10 +49,10 @@ curl -X POST \
 `
 
 ## EXAMPLE Test LLM
-ubuntu@ip-172-123-123-123:~$ source ./.envnv
+`ubuntu@ip-172-123-123-123:~$ source ./.envnv
 curl -X POST \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer $WEBHOOK_API_KEY" \
      -d '{"body":"{\"model\":\"gemma2-9b-it\",\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpful assistant.\"}]}"}' \
      $WEBHOOK_URL
-{"id":"chatcmpl-xx-xx-xx-xx-xx","object":"chat.completion.chunk","created":1721445257,"model":"gemma2-9b-it","system_fingerprint":"xx","choices":[{"index":0,"message":{"role":"assistant","content":"That's right! I'm here to help in any way I can.\n\nWhat can I do for you today? 😊  \n"},"finish_reason":"stop","logprobs":null}],"x_groq":{"id":"xx","usage":{"queue_time":0.022309279,"prompt_tokens":21,"prompt_time":0.002741011,"completion_tokens":31,"completion_time":0.063135737,"total_tokens":52,"total_time":0.065876748}},"usage":{"prompt_tokens":0,"completion_tokens":31,"total_tokens":31},"scout":{"provider":"groq","model":"gemma2-9b-it"}}
+{"id":"chatcmpl-xx-xx-xx-xx-xx","object":"chat.completion.chunk","created":1721445257,"model":"gemma2-9b-it","system_fingerprint":"xx","choices":[{"index":0,"message":{"role":"assistant","content":"That's right! I'm here to help in any way I can.\n\nWhat can I do for you today? 😊  \n"},"finish_reason":"stop","logprobs":null}],"x_groq":{"id":"xx","usage":{"queue_time":0.022309279,"prompt_tokens":21,"prompt_time":0.002741011,"completion_tokens":31,"completion_time":0.063135737,"total_tokens":52,"total_time":0.065876748}},"usage":{"prompt_tokens":0,"completion_tokens":31,"total_tokens":31},"scout":{"provider":"groq","model":"gemma2-9b-it"}}`
