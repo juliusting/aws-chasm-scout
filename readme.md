@@ -8,13 +8,11 @@ Step 2: Get Groq API Key
 
 Skip DigialOcean Step 3 and 4 for AWS Step below
 
-Open AWS account
-- Create EC2 Ubuntu Instance
-
-- Create Elastic IP
+## Open AWS account
+1. Create EC2 Ubuntu Instance
+2. Create Elastic IP
     - Associate Elastic IPs to EC2 Ubuntu Instance
-
-- EC2 > Security Groups > your_launch_wizard_security_group (linked to your instance)
+3. EC2 > Security Groups > your_launch_wizard_security_group (linked to your instance)
     - Edit inbound rules 
         - Custom TCP port 3001
     - Edit outbound rules 
@@ -36,7 +34,9 @@ Continue Step 5: Setup Server
 
 You should get a response like:
 `ubuntu@ip-172-123-123-123:~$ curl localhost:3001`
+
 `OKubuntu@ip-172-123-123-123:~$`
+
 `^ Note the OK`
 
 # Test LLM
